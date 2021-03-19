@@ -1,0 +1,60 @@
+.footer-form-block {
+	@media screen and (max-width: 1199px) {
+		text-align: center;
+	}
+	@media screen and (min-width: 1200px) {
+		width: calc((100% - 30px) / 2);
+		margin-left: auto;
+	}
+}
+
+.subscribe-form {
+	@media screen and (min-width: 1200px) {
+		display: flex;
+	}
+}
+
+label.call-to-action {
+	@media screen and (max-width: 1199px) {
+		display: block;
+	}
+}
+
+.footer-email-input {
+	padding: 15px;
+	border: 1px solid;
+	border-radius: 4px;
+	border-color: $primaryTextColor;
+
+	@include fontBasicStyles(16px, 1.25);
+
+	color: $basicWhiteColor;
+
+	background-color: transparent;
+
+	outline: none;
+
+	transition: border-color $primaryTransition;
+
+	&::placeholder {
+		@include fontBasicStyles(16px, 1.25);
+
+		color: $primaryTextColor;
+	}
+
+	&:focus {
+		border-color: $accentColor;
+	}
+
+	@media screen and (max-width: 1199px) {
+		display: block;
+		width: 100%;
+		max-width: 450px;
+		margin: 0 auto 20px auto;
+	}
+
+	@media screen and (min-width: 1200px) {
+		min-width: 358px;
+		margin-right: 12px;
+	}
+}

@@ -1,0 +1,35 @@
+.logo {
+	display: block;
+	font-family: $logoFont;
+	color: $accentColor;
+
+	@media screen and (max-width: 1199px) {
+		padding: 16px 0;
+		@include fontBasicStyles(24px, 1.16, 700);
+	}
+
+	@media screen and (min-width: 768px) {
+		padding: 26px 0;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 20px;
+		@include fontBasicStyles(26px, 1.19, 700);
+		&.no-margin-bottom {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.logo-header {
+	color: $basicBlackColor;
+}
+
+.logo-footer {
+	color: $basicWhiteColor;
+}
+
+.logo.no-padding {
+	padding: 0;
+	margin-bottom: 20px;
+}

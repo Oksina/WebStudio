@@ -1,0 +1,59 @@
+.portfolio-projects {
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -15px;
+	}
+}
+
+.portfolio-card {
+	@media screen and (max-width: 767px) {
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		width: calc((100% - 30px * 2) / 2);
+		margin: 15px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: calc((100% - 30px * 3) / 3);
+	}
+
+	box-shadow: 1px 0px 0px rgba(0, 0, 0, 0);
+	cursor: pointer;
+	transition: box-shadow $primaryTransition;
+
+	&:hover,
+	&:focus-within {
+		box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+	}
+}
+
+.portfolio-project-information {
+	padding: 20px 24px;
+
+	border-right: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+	border-left: 1px solid #eeeeee;
+}
+
+.portfolio-project-information h2 {
+	margin-top: 0;
+	margin-bottom: 4px;
+
+	@include fontBasicStyles(18px, 2, 700, 0.06em);
+
+	color: $primaryTitleColor;
+}
+
+.portfolio-project-information p {
+	margin-top: 0;
+	margin-bottom: 0;
+
+	@include fontBasicStyles(16px, 1.87, 400);
+
+	color: $primaryTextColor;
+}

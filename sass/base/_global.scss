@@ -1,0 +1,31 @@
+html {
+	box-sizing: border-box;
+}
+
+* {
+	&::before,
+	&::after {
+		box-sizing: inherit;
+	}
+
+	&:focus {
+		outline-color: $accentColor;
+		outline-offset: 2px;
+		outline-style: solid;
+	}
+}
+
+body {
+	font-family: $primaryFont;
+	letter-spacing: 0.03em;
+}
+
+body.modal-open {
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
